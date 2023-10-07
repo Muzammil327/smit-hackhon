@@ -73,7 +73,9 @@ updated .css
 
 
 #### Setup with SCSS
-
+```bash
+npm add -D sass
+```
 
 
 #### Setup with Firebase
