@@ -1,0 +1,74 @@
+// Login --------- ////////// --------------
+
+.form-control {
+    @apply flex flex-col md:flex-row md:h-screen items-center;
+
+    .image {
+        @apply hidden lg:block w-1/2 h-screen;
+
+        img {
+            @apply w-full h-full object-cover;
+        }
+    }
+
+    .form {
+        @apply bg-slate-200 md:mx-auto lg:w-1/2 w-full md:h-screen px-6 lg:px-16 xl:px-12 md:py-20 py-10 flex justify-center items-center;
+
+        .inner {
+            @apply w-full h-full;
+
+            h1 {
+                @apply text-4xl font-medium text-black;
+            }
+
+            p {
+                @apply text-black;
+            }
+
+            .form-inner {
+                @apply mt-10 space-y-4 md:space-y-6;
+
+                button {
+                    @apply w-full py-3 font-medium text-black rounded-lg border-slate-200 hover:shadow flex justify-center items-center space-x-2 bg-red-300;
+                }
+            }
+
+            .oauth {
+                @apply my-5;
+
+                button {
+                    @apply w-full text-center py-3 my-3 border space-x-2 flex justify-center items-center border-slate-200 rounded-lg text-black  hover:border-slate-400 hover:shadow transition duration-150;
+
+                    img {
+                        @apply w-6 h-6;
+
+                        span {
+                            @apply text-black;
+                        }
+                    }
+                }
+            }
+
+            p {
+                @apply mt-8 text-black;
+
+                a {
+                    @apply pl-1 font-semibold text-emerald-400;
+                }
+            }
+        }
+    }
+
+    hr {
+        @apply my-6 border-gray-300 w-full;
+    }
+}
+
+.input-control {
+    @apply focus:bg-gray-50 focus:dark:bg-slate-700;
+    @apply px-5 py-2 mb-2 shadow-sm w-full rounded-md border border-gray-400 bg-slate-100 text-gray-800 dark:text-gray-300;
+}
+
+.form-label {
+    @apply text-black font-bold inline-block pb-2 pt-3;
+}

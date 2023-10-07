@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-h1{
-  @apply text-xl:
+p {
+  font-size:20px;
 }
