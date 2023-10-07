@@ -73,7 +73,46 @@ updated .css
 
 
 #### Setup with SCSS
-
+```bash
+npm add -D sass
+```
 
 
 #### Setup with Firebase
+```bash
+npm install firebase
+```
+
+config/firebase-config.js
+```bash
+import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore';
+import {getAuth} from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: import.meta.env.REACT_APP_FIREBASE_APIKEYS,
+  authDomain: import.meta.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: import.meta.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: import.meta.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: import.meta.env.REACT_APP_FIREBASE_APPID,
+}
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+export default db;
+
+
+export const auth =  getAuth(app);
+```
+
+.env
+```bash
+REACT_APP_FIREBASE_APIKEYS = 
+REACT_APP_FIREBASE_AUTHDOMAIN =
+REACT_APP_FIREBASE_PROJECTID = 
+REACT_APP_FIREBASE_STORAGEBUCKET = 
+REACT_APP_FIREBASE_MESSAGINGSENDERID = 
+REACT_APP_FIREBASE_APPID = 
+```
+
