@@ -49,3 +49,31 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 ```
+
+#### Setup React with Tailwind CSS
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+updated tailwind.config.js
+```bash
+ content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+```
+
+updated .css
+```bash
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
+#### Setup with SCSS
+
+
+
+#### Setup with Firebase
